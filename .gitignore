@@ -36,8 +36,8 @@
 # with EncryptedData folder below. 
 
 # Stata
-!DataWork/**/*.do
-!DataWork/**/*.ado
+*.do
+*.ado
 
 # R
 !DataWork/**/*.R
