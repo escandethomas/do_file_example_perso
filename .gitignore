@@ -1,0 +1,65 @@
+########################################################################
+#
+# .gitignore DIME template
+# (assumes iefolder folder structure but can be modified) 
+#
+########################################################################
+
+#######################
+# Start by ignoring everything, and below we are explicitly saying 
+# what to not ignore
+*
+
+#######################
+# List of files with GitHub functionality anywhere in the repop 
+# that we do not want to ignore
+
+# These files include GitHub settings
+!.gitignore
+!.gitattributes
+
+# Keep markdown files used for documentation on GitHub
+!*.md
+
+#######################
+# For performance reasons, if a folder is already ignored, then 
+# GitHub does not check the content for that folder for matches
+# with additional rules. The line below includes folder in the 
+# top folder (but not their content), so that anything mathcing 
+# the rules below will still not be ignored.
+!*/
+
+#######################
+# The following file types are code that should always be 
+# included no matter where in the DataWork folder they are 
+# located unless that folder is explicitly ignored. See example
+# with EncryptedData folder below. 
+
+# Stata
+!DataWork/**/*.do
+!DataWork/**/*.ado
+
+# R
+!DataWork/**/*.R
+
+# LaTeX
+!DataWork/**/*.tex
+
+# Python
+!DataWork/**/*.py
+
+# Matlab
+!DataWork/**/*.m
+
+#######################
+# Include some additional file formats in any output folder
+!DataWork/**/Output/**/*.txt
+!DataWork/**/Output/**/*.csv
+!DataWork/**/Output/**/*.xml
+!DataWork/**/Output/**/*.eps
+!DataWork/**/Output/**/*.svg
+
+#######################
+# Explicitly exclude the encrypted folder branch
+**/EncryptedData/
+DataWork/Phone_Survey/Dofiles/Analysis/baseline_balance.tex
